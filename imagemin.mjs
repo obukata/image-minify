@@ -6,7 +6,7 @@ import svgo from 'imagemin-svgo'
 // NOTE - webpを使用する場合。npm packageも忘れずに。
 // import webp from 'imagemin-webp'
 
-keepfolder(['dist/assets/images/**/*.{jpg,png,gif,svg}'], {
+keepfolder(['dist/**/*.{jpg,png,gif,svg}'], {
   plugins: [
     mozjpeg({ quality: 75 }),
     pngquant({ quality: [0.75, 1] }),

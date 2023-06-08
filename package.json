@@ -6,13 +6,15 @@
     "node": "18.x"
   },
   "scripts": {
-    "build": "run-s build:reset build:imagemin",
+    "build": "run-s build:reset build:copy build:imagemin",
     "build:reset": "rimraf dist",
+    "build:copy": "cpx 'src/**/*' 'dist'",
     "build:imagemin": "node imagemin.mjs --initial"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "cpx": "^1.5.0",
     "imagemin-cli": "^7.0.0",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-keep-folder": "^5.3.2",
