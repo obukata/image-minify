@@ -6,15 +6,18 @@
     "node": "18.x"
   },
   "scripts": {
-    "build": "run-s build:reset build:copy build:imagemin",
-    "build:reset": "rimraf dist",
-    "build:copy": "cpx 'src/**/*' 'dist'",
-    "build:imagemin": "node imagemin.mjs --initial"
+    "build": "run-s reset copy imagemin",
+    "convert": "run-s reset copy png-to-jpeg imagemin",
+    "reset": "rimraf dist",
+    "copy": "cpx 'src/**/*' 'dist'",
+    "imagemin": "node imagemin.mjs --initial",
+    "png-to-jpeg": "node png-to-jpeg.mjs"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cpx": "^1.5.0",
+    "fs": "^0.0.1-security",
     "imagemin-cli": "^7.0.0",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-keep-folder": "^5.3.2",
@@ -23,6 +26,8 @@
     "imagemin-svgo": "^10.0.1",
     "imagemin-webp": "^8.0.0",
     "npm-run-all": "^4.1.5",
+    "path": "^0.12.7",
+    "png-to-jpeg": "^1.0.1",
     "rimraf": "^4.1.2"
   }
 }

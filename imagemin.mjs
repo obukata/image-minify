@@ -3,6 +3,8 @@ import mozjpeg from 'imagemin-mozjpeg'
 import pngquant from 'imagemin-pngquant'
 import gifsicle from 'imagemin-gifsicle'
 import svgo from 'imagemin-svgo'
+import pngToJpeg from 'png-to-jpeg'
+
 // NOTE - webpを使用する場合。npm packageも忘れずに。
 // import webp from 'imagemin-webp'
 
