@@ -24,4 +24,8 @@ $ npm install
 
 画像出力
 $ npm run build
+
+PNG -> JPEGに変換 + 画像圧縮
+（Notionへのスクショ掲載などPNG画像では圧縮しても難しい場合に便利）
+$ npm run convert
 ```
